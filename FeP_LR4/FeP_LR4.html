@@ -1,0 +1,75 @@
+﻿<!DOCTYPE>
+<html>
+	<head>
+		<title>Анкета</title>
+		<meta charset=utf-8></meta>
+	</head>
+
+<style>
+*{
+		padding: 10px;
+		margin: 10px;
+}
+div.forma {
+				border-left: 6px solid black;
+				border-right: 6px solid black;
+				background-color: silver;
+				width: 600px;
+				margin: 20px;
+				padding: 20px;
+			}
+</style>
+	<body>
+		<div class="forma">			
+			<form action="" id="forma">
+				<div align="center">
+					<input type="image" src="planet.jpg" name="submit" alt="ZZZZ" height="200">
+				</div>
+				<div>
+					Имя <input type="text" name="name" size="20" required pattern="\D{4,10}" maxlength="10">
+					Фамилия <input type="text" name="surname" size="20" required pattern="\D{4,10}" maxlength="10">
+				</div>
+					Пароль <input type="password" name="surname" size="20" required pattern="\D{4,10}" maxlength="10">
+					Страна проживания
+					<input list="country" required pattern="\D{4,0}" maxlength="15">
+					<datalist id="country">
+						<option value="Беларусь"></option>
+						<option value="Россия"></option>
+						<option value="Украина"></option>
+						<option value="Польша"></option>
+						<option value="Китай"></option>
+						<option value="Индия"></option>
+						<option value="Великобритания"></option>
+					</datalist>
+					<div>
+						Дата рождения <input type="date" required>
+						Пол
+						M<input type="radio" name="pol" value="m" checked>
+						Ж<input type="radio" name="pol" value="w">
+					</div>
+					<div>
+						Ваши интересы:
+						<br>
+						<input type="checkbox" id="cb1">
+						<label for="cb1">Спорт</label>
+						<br>
+						<input type="checkbox" id="cb2">
+						<label for="cb2">Программирование</label>
+						<br>
+						<input type="checkbox" id="cb3">
+						<label for="cb3">Радиотехника</label>
+						<br>
+						<input type="checkbox" id="cb4">
+						<label for="cb4">Чтение</label>
+						<br>
+						<input type="checkbox" id="cb5">
+						<label for="cb5">Прочее</label>
+					</div>
+					<div align=center>
+						Примечание: <br><textarea rows="5" cols="50" form="forma"></textarea>
+						<input type="submit" name="send" value="Отправить данные">
+					</div>
+			</form>
+		</div>
+	</body>
+</html>
