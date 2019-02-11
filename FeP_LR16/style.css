@@ -1,0 +1,48 @@
+.cl1 {
+	color: blue;
+	font-size: 12px;
+	font-family: Courier New;
+}
+
+.cl2 {
+	color: red;
+	font-weight: bold;
+}
+
+.cl3 {
+	color: green;
+	font-family: Times New Roman;
+	font-style: italic;
+}
+
+.cl4 {
+	color: black;
+	border-style: dotted;
+	border-color: red;
+}
+
+.cl5 {
+	color: blue;
+	font-weight: bold;
+	font-style: italic;
+}
+
+.text_base{
+	font-style: normal;
+}
+
+.text_mouse{
+	font-style: italic;
+}
+
+.yel{
+	color: yellow;
+}
+
+.bg{
+	background-color: red;
+}
+
+.it{
+	font-style: italic;
+}

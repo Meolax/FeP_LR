@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>lab17_1.html</title>         
+    </head>
+    <body>
+        <script>
+            var name = window.prompt("Ваше имя?");
+            if(name != '' && name != "null")
+                document.write('<h1 onclick="this.innerHTML=new_name()">Здравствуйте, '+name+'!</h1>');
+            else
+                document.write('<h1 onclick="this.innerHTML=new_name()">Здравствуйте! Было бы приятно с Вами познакомиться</h1>');               
+        
+            function new_name(){
+                if(window.confirm("Вы хотите изменить имя пользователя?")){
+                    name = prompt("Ваше новое имя?");
+                    if(name != '' && name != "null")
+                        return 'Здравствуйте, '+name+'!';
+                    else
+                        return 'Здравствуйте! Было бы приятно с Вами познакомиться';  
+                }else
+                    return 'Здравствуйте, '+name+'!';
+            }
+        </script>     
+    </body>
+</html>

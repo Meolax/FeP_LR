@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>lab16_2.html</title>   
+        <style>
+            .normal{
+                font-style: normal;
+            }
+            .new{
+                font-style: italic;
+            }
+        </style>          
+    </head>
+    <body>
+            
+            <h1 id = "elem" class="normal" onMouseOver="this.className='new'"
+            onMouseOut="changeText()">Я , Блео М.Ю. учусь работать с JavaScript</h1>
+            <script>
+                setInterval('showWindwow ()', 10000);
+            function showWindwow ()
+            {
+                My_window=window.open("doc.html","","width=500,height=500,status=no, toolbar=no,menubar=no,scrollbars=no");
+            }
+           
+ 
+            function changeText ()
+            {
+                setTimeout ("changer()", 10000);               
+            }
+
+            function changer ()
+            {
+                document.getElementById('elem').classList.remove ('new');
+                document.getElementById('elem').classList.toggle ('normal');                
+            }
+            </script>
+            
+    </body>
+</html>

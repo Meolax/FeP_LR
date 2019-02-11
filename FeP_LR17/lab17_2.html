@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title></title>   
+        <SCRIPT>
+            var n = window.prompt("Номер числа фибоначи");
+            var x = 1;
+			var pref = 0;
+            for(var i = 1; i < n; i++)
+            {
+				x += pref;
+				pref = x;
+                
+            }
+            alert(n+' член ряда фибоначи: '+x);
+            document.write('<h1>'+x+'</h1>');
+            My_window=window.open("doc.html","","width=500,height=500,status=no, toolbar=no,menubar=no,scrollbars=no");
+            My_window.document.write('<h1>'+x+'</h1>');
+        </SCRIPT>
+    </head>
+    <body>
+    </body>
+</html>

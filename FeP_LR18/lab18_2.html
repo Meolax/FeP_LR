@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>lab18_2.html</title>             
+    </head>
+    <body>
+        <SCRIPT>
+            var n = window.prompt("Число количество чисел");
+            var x_array = new Array();
+			var output = "";
+            for(var i = 1; i <= n; i++)
+            {
+                x_array[i] = Number(window.prompt("Число "+i));
+            }
+      
+            for (var i = 0; i < x_array.length; i++) {
+                if (x_array[i]==0) {
+                    output = output + i +"; ";
+                }
+            }
+			if (output.length == 0)
+			{
+				window.alert("Индексы не найдены");
+			} else  {
+				window.alert("Индексы нулей: "+output);
+			}
+            
+        </SCRIPT>
+    </body>
+</html>
