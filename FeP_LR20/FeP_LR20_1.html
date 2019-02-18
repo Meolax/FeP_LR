@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title></title>   
+        <SCRIPT>
+            var myObject = 
+            {
+                name: 'object',
+                mood: 'well',
+                number: 1,
+                qa: 'high',
+                dear: function () {
+                    alert ("Hi, "+this.name+"!");
+                },
+                displayObject: function ()
+                {
+                    var str = "<table border=\"1\">";
+                    str += "<tr><td>Name:</td><td>"+this.name+"</td></tr>";
+                    str += "<tr><td>Mood:</td><td>"+this.mood+"</td></tr>";
+                    str += "<tr><td>Number:</td><td>"+this.number+"</td></tr>";
+                    str += "<tr><td>QA:</td><td>"+this.qa+"</td></tr>";
+                    str += "</table>"; 
+                    document.write (str);
+                },
+                displayAlert: function ()
+                {
+                    for (var key in this)
+                    {
+                        alert( "Ключ: " + key + " значение: " + this[key] );
+                    }  
+                }                
+            }
+            myObject.dear ();
+            myObject.displayObject ();
+            myObject.displayAlert ();
+            
+
+                 
+        </SCRIPT>
+    </head>
+    <body>
+    </body>
+</html>
