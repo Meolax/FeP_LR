@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title></title>   
+        <SCRIPT>
+            var n = window.prompt("Номер числа фибоначи");
+            var x = 1;
+            var sum = x;
+			var pref = 0;
+            for(var i = 1; i < n; i++)
+            {
+				x += pref;
+                pref = x - pref;
+                sum += x;                
+            }
+            alert('Сумма чисел до '+n+' числа Фибоначи = '+sum);
+        </SCRIPT>
+    </head>
+    <body>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title></title>   
+        <SCRIPT>
+            var num = window.prompt("Введите число");
+            var step = window.prompt("Введите степень");
+            
+            
+            function mulmul (num, step) {
+                var result = 1.0;
+                if (step > 0)
+                {
+                    for(var i = 0; i < step; i++)
+                    {
+                        result *= num;                 
+                    }
+                } else if (step < 0) {
+                    for(var i = 0; i > step; i--)
+                    {
+                        result /= num;                 
+                    }
+                }                
+                return result;
+            }
+
+            alert('Результат возведения '+num+' в степень '+step+' = '+(mulmul (num, step)));
+        </SCRIPT>
+    </head>
+    <body>
+    </body>
+</html>
