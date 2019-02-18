@@ -10,8 +10,7 @@
             for(var i = 1; i < n; i++)
             {
 				x += pref;
-				pref = x;
-                
+                pref = x - pref;                
             }
             alert(n+' член ряда фибоначи: '+x);
             document.write('<h1>'+x+'</h1>');
