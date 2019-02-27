@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>lab21_2.html</title>             
+    </head>
+    <body>
+        
+        <input type=date id="dat">
+        <input type="button" id="btn"  value="OK">
+        <SCRIPT>
+                document.getElementById('btn').onclick = getNameOfDay;
+                function getNameOfDay ()
+                {
+                    var days = ['Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+                    alert(days[new Date(document.getElementById("dat").value).getDay()]);
+                }
+               
+        </SCRIPT>
+    </body>
+</html>
