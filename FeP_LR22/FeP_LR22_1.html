@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>lab22_1.html</title>             
+    </head>
+    <body>
+        <SCRIPT>
+            
+            window.onload = alert("Переход mrk-bsuir.by")
+            setTimeout(function(){
+                var win = window.open("http://mrk-bsuir.by", "BSUIR");
+                setTimeout(function(){
+                    win.close();
+                },10000)
+            },3000)
+
+
+            var wind;
+            function FrsWindow(){
+                if (wind)
+                    wind.close();
+                wind = window.open("FeP_LR21_1.html", "Window 1",
+                "width=200,height=200,location=no, status=yes,toolbar=no,menubar=no, scrollbars=yes");
+            }
+            function ScdWindow(){
+                if (wind)
+                    wind.close();
+                wind = window.open("FeP_LR21_1.html", "Window 2",
+                "width=400,height=400,location=no, status=yes,toolbar=yes,menubar=yes, scrollbars=no");
+            }
+
+            function Resize(){
+                var count = document.getElementById("count").value;
+                if (isNaN(count) || !count){
+                    alert("Введите число");
+                }else{
+                    wind.resizeBy(count,count);
+                    wind.focus();
+                }
+            }
+
+        </SCRIPT>
+        <button onclick="FrsWindow()">Первое окно</button>
+        <button onclick="ScdWindow()">Второе окно</button><br>
+        <input type="number" id="count"><button onclick="Resize()"> Изменить окно</button>
+        <br>
+    </body>
+</html>
