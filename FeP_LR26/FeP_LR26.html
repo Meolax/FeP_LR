@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>FeP_LR26</title>
+    
+</head>
+  <body>
+    <input type="text" id="Text" value="">
+    <input type="button" id="btnTextEnter" onclick="enterText()" value="Enter Text">
+    <input type="button" id="btnTextChangeStyle" onclick="Italic_Red_ReadOnly_Text()" value="Italic_Red_ReadOnly">
+    <br><br>
+    <img src="illuminati.jpg" widht="20" height="20" id="imgILL" alt="" onmouseover="img_size_inc_20()"><br><br>
+    <input type="button" id="img_size_reset" onclick="img_size_reset()" value="Reset">
+    <script type="text/javascript">
+      var text = document.getElementById('Text');
+      var img = document.getElementById('imgILL');
+      
+      function enterText() {
+        let text = prompt('Enter Text');
+        if (text != null) {
+          text.value = text;
+        }
+      }
+
+      function Italic_Red_ReadOnly_Text() {
+        text.style.fontStyle = 'italic';
+        text.style.color = 'red';
+        text.readOnly = true;
+      }
+
+      function img_size_reset(){
+          img.width = 20;
+          img.height = 20;
+      }
+
+      function img_size_inc_20(){
+        img.width += 20;
+        img.height += 20;
+      }
+    </script>
+  </body>
+</html>
